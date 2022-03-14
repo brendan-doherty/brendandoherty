@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<title>Brendan Doherty</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="icon" href="Images/Logo.jpg">
+<style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: "Lato", sans-serif;
+    }
+
+    body,
+    html {
+        height: 100%;
+        color: rgb(77, 75, 75);
+        line-height: 1.8;
+    }
+
+    .w3-wide {
+        letter-spacing: 10px;
+    }
+
+    .w3-hover-opacity {
+        cursor: pointer;
+    }
+
+    .material-icons {
+        vertical-align: -28%
+    }
+
+    p+ul {
+        margin-top: -13px;
+    }
+
+    .w3-sidebar {
+        z-index: 50;
+    }
+
+    ul {
+        list-style-position: inside;
+        padding: 0;
+    }
+
+    .responsive-iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .helpframe {
+        width: 33vw;
+        height: 28.125vw;
+        /*16:9*/
+        max-height: 20vw;
+        /*16:9*/
+    }
+
+    .smallframe {
+        width: 100%;
+    }
+
+    .video-container {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        padding-top: 56.25%;
+        /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+    }
+</style>
+
+<nav class="w3-sidebar w3-bar-block w3-card w3-animate-right w3-center" style="display:none" id="mySidebar">
+    <h1 class="w3-xxxlarge w3-text-theme">Navigation</h1>
+    <button class="w3-bar-item w3-button" onclick="closeSidebar()">Close <i class="fa fa-remove"></i></button>
+    <a href="index.html" class="w3-bar-item w3-button">Home</a>
+</nav>
+
+<body>
+    <!-- Navbar -->
+    <div>
+        <div class="w3-bar w3-blue w3-card w3-left-align w3-large"">
+            <div onclick=" openSidebar()"><a
+                class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-blue"
+                title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a></div>
+        <a href="index.html" class="w3-bar-item w3-button w3-hover-white w3-padding-large">Home</a>
+        <a href="projects.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-white">Projects</a>
+    </div>
+
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large"></div>
+    </div>
+
+    <div class="w3-padding w3-row">
+        <div class="w3-twothird w3-center w3-row-padding w3-hide-medium w3-hide-large">
+            <h3>Car Audio Gesture Control</h3>
+            Uses a 16x16 pixel IR camera, Bluetooth LE module, a Teensy 4.0, and a custom Android app.
+            Connects to a phone over Bluetooth whenever the vehicle Bluetooth is connected. Left/right swipes control
+            forward/back skips.
+            Upward swipes toggle play/pause.
+        </div>
+        <div class="w3-center w3-third w3-row-padding w3-hide-medium w3-hide-large">
+            <iframe class="smallframe" src="https://www.youtube.com/embed/WrUQPn9H1oQ" allowfullscreen></iframe>
+        </div>
+        <div class="w3-twothird w3-center w3-row-padding w3-hide-small">
+            <h1>Car Audio Gesture Control</h1>
+            Uses a 16x16 pixel IR camera, Bluetooth LE module, a Teensy 4.0, and a custom Android app.
+            Connects to a phone over Bluetooth whenever the vehicle Bluetooth is connected. Left/right swipes control
+            forward/back skips.
+            Upward swipes toggle play/pause.
+        </div>
+        <div class="w3-center w3-third w3-row-padding w3-hide-small">
+            <iframe class="helpframe" src="https://www.youtube.com/embed/WrUQPn9H1oQ" allowfullscreen></iframe>
+        </div>
+
+    </div>
+
+    <div class="w3-padding w3-row">
+        <div class="w3-twothird w3-center w3-row-padding w3-hide-medium w3-hide-large">
+            <h3>Bass Guitar Video Game Controller</h3>
+            Using a Python program, notes played on a bass guitar are turned into keyboard inputs for a video game.
+            Uses a Python Audio Stream library. Performs a Fast Fourier Transform on the audio stream to determine the
+            note being played.
+            Depending on the note, keypresses are generated.
+        </div>
+        <div class="w3-center w3-third w3-row-padding w3-hide-medium w3-hide-large">
+            <iframe class="smallframe" src="https://www.youtube.com/embed/BOikJTqVL1o" allowfullscreen></iframe>
+        </div>
+        <div class="w3-twothird w3-center w3-row-padding w3-hide-small">
+            <h1>Bass Guitar Video Game Controller</h1>
+            Using a Python program, notes played on a bass guitar are turned into keyboard inputs for a video game.
+            Uses a Python Audio Stream library. Performs a Fast Fourier Transform on the audio stream to determine the
+            note being played.
+            Depending on the note, keypresses are generated.
+        </div>
+        <div class="w3-center w3-third w3-row-padding w3-hide-small">
+            <iframe class="helpframe" src="https://www.youtube.com/embed/BOikJTqVL1o" allowfullscreen></iframe>
+        </div>
+
+    </div>
+
+    <div class="w3-padding w3-row">
+        <div class="w3-twothird w3-center w3-row-padding w3-hide-medium w3-hide-large">
+            <h3>Motion Activated Phillips Hue Lighting</h3>
+            Uses an ESP8266 with a Passive Infra-Red (PIR) sensor. Communicates over local network to a Raspberry Pi
+            that controls lighting via the Phillips Hue API. Multiple sensor systems are distributed throughout the
+            house for launching different actions at different times (garage interior lights, opening/closing blinds).
+            Designed a custom PCB and 3D printed enclosure for the sensors.
+        </div>
+        <div class="w3-center w3-third w3-row-padding w3-hide-medium w3-hide-large">
+            <iframe class="smallframe" src="https://www.youtube.com/embed/WxQ4a714YrA" allowfullscreen></iframe>
+        </div>
+        <div class="w3-twothird w3-center w3-row-padding w3-hide-small">
+            <h1>Motion Activated Phillips Hue Lighting</h1>
+            Uses an ESP8266 with a Passive Infra-Red (PIR) sensor. Communicates over local network to a Raspberry Pi
+            that controls lighting via the Phillips Hue API. Multiple sensor systems are distributed throughout the
+            house for launching different actions at different times (garage interior lights, opening/closing blinds).
+            Designed a custom PCB and 3D printed enclosure for the sensors.
+        </div>
+        <div class="w3-center w3-third w3-row-padding w3-hide-small">
+            <iframe class="helpframe" src="https://www.youtube.com/embed/WxQ4a714YrA" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div class="w3-padding w3-row">
+        <div class="w3-twothird w3-center w3-row-padding w3-hide-medium w3-hide-large">
+            <h3>Gesture Controlled Phillips Hue Lighting</h3>
+            Uses a Microsoft Kinect Camera (Gen I) and a Python script. Leverages the Microsoft Kinect
+            API to extract skeleton and joint data which is passed to the Python script to run gesture
+            recognition using the change in joint positions over time.
+        </div>
+        <div class="w3-center w3-third w3-row-padding w3-hide-medium w3-hide-large">
+            <iframe class="smallframe" src="https://www.youtube.com/embed/KxzUGOgRLVE" allowfullscreen></iframe>
+        </div>
+        <div class="w3-twothird w3-center w3-row-padding w3-hide-small">
+            <h1>Gesture Controlled Phillips Hue Lighting</h1>
+            Uses a Microsoft Kinect Camera (Gen I) and a Python script. Leverages the Microsoft Kinect
+            API to extract skeleton and joint data which is passed to the Python script to run gesture
+            recognition using the change in joint positions over time.
+        </div>
+        <div class="w3-center w3-third w3-row-padding w3-hide-small">
+            <iframe class="helpframe" src="https://www.youtube.com/embed/KxzUGOgRLVE" allowfullscreen></iframe>
+        </div>
+
+    </div>
+
+    <div class="w3-padding w3-row">
+        <div class="w3-twothird w3-center w3-row-padding w3-hide-medium w3-hide-large">
+            <h3>LED Headlight Turn Signal Strip</h3>
+            Using a PIC32 microcontroller, voltage regulator, and individually addressable RGB LED strip, accent
+            lighting was added to my vehicle's headlights.
+            Special care was taken to ensure it fails safe and was weather-tolerant.
+        </div>
+        <div class="w3-center w3-third w3-row-padding w3-hide-medium w3-hide-large">
+            <iframe class="smallframe" src="https://www.youtube.com/embed/K6Bt3eDfJ4A" allowfullscreen></iframe>
+        </div>
+        <div class="w3-twothird w3-center w3-row-padding w3-hide-small">
+            <h1>LED Headlight Turn Signal Strip</h1>
+            Using a PIC32 microcontroller, voltage regulator, and individually addressable RGB LED strip, accent
+            lighting was added to my vehicle's headlights.
+            Special care was taken to ensure it fails safe and was weather-tolerant. Defaults to white and strobes
+            orange when the turn signal is active.
+        </div>
+        <div class="w3-center w3-third w3-row-padding w3-hide-small">
+            <iframe class="helpframe" src="https://www.youtube.com/embed/K6Bt3eDfJ4A" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div class="w3-padding w3-row">
+        <div class="w3-twothird w3-center w3-row-padding w3-hide-medium w3-hide-large">
+            <h3>Custom Sound System</h3>
+            2x 16" 700W Skar Audio woofers, 4x 6.5" JBL 300W 2-way speakers, Skar 1200W 4 + 2 channel MOSFET amplifier,
+            and a line out converter.
+            Designed for high-quality sound, not for volume. Designed to be removed in under 5 minutes to keep
+            the utility of the hatchback.
+            Implemented a custom high-current disconnect easily located in the engine bay and a quick-disconnect harness
+            for the signal wires.
+        </div>
+        <div class="w3-center w3-third w3-row-padding w3-hide-medium w3-hide-large">
+            <div class="w3-card">
+                <img src="Images/Speakers.jpg" alt="Car" style="width:100%">
+            </div>
+        </div>
+        <div class="w3-twothird w3-center w3-row-padding w3-hide-small">
+            <h1>Custom Sound System</h1>
+            2x 16" 700W Skar Audio woofers, 4x 6.5" JBL 300W 2-way speakers, Skar 1200W 4 + 2 channel MOSFET amplifier,
+            and a line out converter.
+            Designed for high-quality sound, not for volume. Designed to be removed in under 5 minutes to keep
+            the utility of the hatchback.
+            Implemented a custom high-current disconnect easily located in the engine bay and a quick-disconnect harness
+            for the signal wires.
+        </div>
+        <div class="w3-center w3-third w3-row-padding w3-hide-small">
+            <div class="w3-card">
+                <img src="Images/Speakers.jpg" alt="Car" style="width:100%">
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="w3-row">
+        <footer class="w3-center w3-dark-grey">
+            <div class="w3-xxxlarge">
+                <a href="https://www.linkedin.com/in/brendan-doherty-2000/">
+                    <i class="fa fa-linkedin w3-hover-opacity"></i></a>
+                <a href="https://github.com/Locomotivation">
+                    <i class="fa fa-github w3-hover-opacity"></i></a>
+                <a href="https://www.instagram.com/brendan.j.d/">
+                    <i class="fa fa-instagram w3-hover-opacity"></i></a>
+            </div>
+        </footer>
+    </div>
+
+
+
+    <script>
+        function openSidebar() {
+            document.getElementById("mySidebar").style.width = "100%";
+            document.getElementById("mySidebar").style.display = "block";
+        }
+        function closeSidebar() {
+            document.getElementById("mySidebar").style.display = "none";
+        }
+        function resizeIframe(obj) {
+            obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
+        }
+    </script>
+
+</body>
+
+</html>

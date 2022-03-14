@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<title>Brendan Doherty</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="icon" href="Images/Logo.jpg">
+<style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: "Lato", sans-serif;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    body,
+    html {
+        height: 100%;
+        color: rgb(77, 75, 75);
+        line-height: 1.8;
+    }
+
+    .w3-wide {
+        letter-spacing: 10px;
+    }
+
+    .w3-hover-opacity {
+        cursor: pointer;
+    }
+
+    .w3-xxxlarge {
+        text-decoration: none;
+    }
+
+    .material-icons {
+        vertical-align: -28%
+    }
+
+    .w3-sidebar {
+        z-index: 50;
+    }
+
+    p+ul {
+        margin-top: -13px;
+    }
+
+    ul {
+        list-style-position: inside;
+        padding: 0;
+    }
+</style>
+
+<nav class="w3-sidebar w3-bar-block w3-card w3-animate-right w3-center" style="display:none" id="mySidebar">
+    <h1 class="w3-xxxlarge w3-text-theme">Navigation</h1>
+    <button class="w3-bar-item w3-button" onclick="closeSidebar()">Close <i class="fa fa-remove"></i></button>
+    <a href="projects.html" class="w3-bar-item w3-button">Projects</a>
+</nav>
+
+
+<body>
+    <!-- Navbar -->
+    <div class="w3-top">
+        <div class="w3-bar w3-blue w3-card w3-left-align w3-large">
+            <div onclick="openSidebar()"><a
+                    class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-blue"
+                    title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a></div>
+            <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
+            <a href="projects.html"
+                class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Projects</a>
+        </div>
+    </div>
+
+    <!-- Container (About Section) -->
+    <div class="w3-content w3-container w3-padding-64" id="about">
+        <h3 class="w3-center">ABOUT ME</h3>
+        <p class="w3-center"><em>Computer Engineering Student, <br> Minor in Computer Science</em></p>
+        <p></p>
+        <div class="w3-row">
+            <div class="w3-col m6 w3-center w3-padding-large">
+                <p><b>Brendan Doherty</b></p>
+                <img src="Images/Headshot.jpg" class="w3-round-xlarge w3-image" alt="Photo of Me" width="400"
+                    height="400">
+            </div>
+
+            <!-- Hide this text on small devices -->
+            <div class="w3-col m6 w3-hide-small w3-padding-large">
+                <p>A passion for technology has gripped me ever since I was a little kid. I would take apart the
+                    television remotes to see how they were wired. I pushed for a computer science club in middle
+                    school. I asked for Snap Electronics kits and "Python for Dummies" for Christmas; I would create
+                    text-based adventure games in Bash on our family computer. From the moment I could talk, my family
+                    knew I was destined for a technical field.</p>
+
+                <p>This passion, along with my desire to learn, has carried me to where I am now: a third-year computer
+                    engineering student also pursuing a computer science minor. My call to learn then lead me to become
+                    heavily involved with multiple Technical Societies - UMSAE and UMSATS. These groups give me a path
+                    to apply the theory learned in class, recognize gaps in my knowledge, and connect to a wealth of
+                    industry professionals and higher-level students to feed my love of knowledge further. </p>
+            </div>
+        </div>
+    </div>
+
+    <button onclick="myAccFunc('About Me')"
+        class="w3-padding-16 w3-hide-large w3-hide-medium w3-theme w3-button w3-block w3-left-align w3-blue">About Me
+        <i class="fa fa-chevron-circle-down" aria-hidden="true"></i></button>
+    <div id="About Me" class="w3-hide">
+        <div class="w3-container">
+            <p>A passion for technology has gripped me ever since I was a little kid. I would take apart the
+                television remotes to see how they were wired. I pushed for a computer science club in middle
+                school. I asked for Snap Electronics kits and "Python for Dummies" for Christmas; I would create
+                text-based adventure games in Bash on our family computer. From the moment I could talk, my family
+                knew I was destined for a technical field.</p>
+
+            <p>This passion, along with my desire to learn, has carried me to where I am now: a third-year computer
+                engineering student also pursuing a computer science minor. My call to learn then lead me to become
+                heavily involved with multiple Technical Societies - UMSAE and UMSATS. These groups give me a path
+                to apply the theory learned in class, recognize gaps in my knowledge, and connect to a wealth of
+                industry professionals and higher-level students to feed my love of knowledge further. </p>
+        </div>
+    </div>
+
+
+    <button onclick="myAccFunc('Skills')"
+        class="w3-padding-16 w3-hide-large w3-hide-medium w3-theme w3-button w3-block w3-left-align w3-blue">Skills
+        And Experience
+        <i class="fa fa-chevron-circle-down" aria-hidden="true"></i></button>
+    <div id="Skills" class="w3-hide">
+        <div>
+            <div class="w3-quarter w3-row-padding">
+                <p>
+                    <strong>Programming Languages: <i class="material-icons">laptop</i> </strong> <br>
+                    Strong with:
+                <ul>
+                    <li>C</li>
+                    <li>Java</li>
+                    <li>Python</li>
+                </ul>
+                Past experience with:
+                <ul>
+                    <li>C++</li>
+                    <li>HTML</li>
+                    <li>JavaScript</li>
+                </ul>
+                </p>
+
+            </div>
+
+            <div class="w3-quarter w3-row-padding w3-col">
+                <p>
+                    <strong>Professional Experience: <i class="material-icons">account_circle</i> </strong> <br>
+                <ul>
+                    <li>Embedded Firmware Developer at Taiv</li>
+                    <li>UMSAE Formula Electric Software Systems Officer</li>
+                    <li>UMSATS Communications System Developer</li>
+                    <li>Canadian Amateur Radio Certification (Basic with honours)</li>
+                    <li>4 Year IEEE Member</li>
+                    <li>3 Year Engineers Geoscientists Manitoba Member</li>
+                </ul>
+                </p>
+            </div>
+
+            <div class="w3-quarter w3-row-padding w3-col">
+                <p>
+                    <strong>Past Work: <i class="material-icons">build</i></strong> <br>
+                <ul>
+                    <li>Embedded control systems design</li>
+                    <li>Custom OTA update service</li>
+                    <li>Various communication protocols</li>
+                    <li>Gesture-based HCI</li>
+                    <li>Advanced home automation</li>
+                    <li>NFC-based tracking</li>
+                </ul>
+                </p>
+            </div>
+
+            <div class="w3-quarter w3-row-padding">
+                <p>
+                    <strong>Interests: <i class="material-icons">science</i></strong> <br>
+                <ul>
+                    <li>Embedded systems firmware</li>
+                    <li>Distributed computing</li>
+                    <li>Sensors and actuators</li>
+                    <li>Human-computer interaction</li>
+                    <li>Control systems</li>
+                    <li>Communication systems</li>
+                    <li>Telemetry and data handling</li>
+                </ul>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="w3-hide-small w3-content">
+        <h3 class="w3-center w3-wide">SKILLS AND EXPERIENCE </h3>
+        <div>
+            <div class="w3-quarter w3-row-padding">
+                <p>
+                    <strong>Programming Languages: <i class="material-icons">laptop</i> </strong> <br>
+                    Strong with:
+                <ul>
+                    <li>C</li>
+                    <li>Java</li>
+                    <li>Python</li>
+                </ul>
+                <p>Past experience with: </p>
+                <ul>
+                    <li>C++</li>
+                    <li>HTML</li>
+                    <li>JavaScript</li>
+                </ul>
+
+            </div>
+
+            <div class="w3-quarter w3-row-padding w3-col">
+                <p>
+                    <strong>Professional Experience: <i class="material-icons">account_circle</i> </strong> <br>
+                <ul>
+                    <li>Embedded Firmware Developer at Taiv</li>
+                    <li>UMSAE Formula Electric Software Systems Officer</li>
+                    <li>UMSATS Communications System Developer</li>
+                    <li>Canadian Amateur Radio Certification (Basic with honours)</li>
+                    <li>4 Year IEEE Member</li>
+                    <li>3 Year Engineers Geoscientists Manitoba Member</li>
+                </ul>
+                </p>
+            </div>
+
+            <div class="w3-quarter w3-row-padding w3-col">
+                <p>
+                    <strong>Past Work: <i class="material-icons">build</i></strong> <br>
+                <ul>
+                    <li>Embedded control systems design</li>
+                    <li>Custom OTA update service</li>
+                    <li>Various communication protocols</li>
+                    <li>Gesture-based HCI</li>
+                    <li>Advanced home automation</li>
+                    <li>NFC-based tracking</li>
+                </ul>
+                </p>
+            </div>
+
+            <div class="w3-quarter w3-row-padding">
+                <p>
+                    <strong>Interests: <i class="material-icons">science</i></strong> <br>
+                <ul>
+                    <li>Embedded systems firmware</li>
+                    <li>Distributed computing</li>
+                    <li>Sensors and actuators</li>
+                    <li>Human-computer interaction</li>
+                    <li>Control systems</li>
+                    <li>Communication systems</li>
+                    <li>Telemetry and data handling</li>
+                </ul>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="w3-row">
+        <footer class="w3-center w3-dark-grey">
+            <div class="w3-xxxlarge">
+                <a href="https://www.linkedin.com/in/brendan-doherty-2000/">
+                    <i class="fa fa-linkedin w3-hover-opacity"></i></a>
+                <a href="https://github.com/Locomotivation">
+                    <i class="fa fa-github w3-hover-opacity"></i></a>
+                <a href="https://www.instagram.com/brendan.j.d/">
+                    <i class="fa fa-instagram w3-hover-opacity"></i></a>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        function openSidebar() {
+            document.getElementById("mySidebar").style.width = "100%";
+            document.getElementById("mySidebar").style.display = "block";
+        }
+        function closeSidebar() {
+            document.getElementById("mySidebar").style.display = "none";
+        }
+        function myAccFunc(id) {
+            var x = document.getElementById(id);
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+    </script>
+
+</body>
+
+</html>
