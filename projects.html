@@ -26,6 +26,10 @@
         line-height: 1.8;
     }
 
+    p {
+        font-size: 18px;
+    }
+
     .w3-wide {
         letter-spacing: 10px;
     }
@@ -91,35 +95,40 @@
 <body>
     <!-- Navbar -->
     <div>
-        <div class="w3-bar w3-blue w3-card w3-left-align w3-large"">
+        <div class="w3-bar w3-blue w3-card w3-left-align w3-large">
             <div onclick=" openSidebar()"><a
-                class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-blue"
-                title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a></div>
-        <a href="index.html" class="w3-bar-item w3-button w3-hover-white w3-padding-large">Home</a>
-        <a href="projects.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-white">Projects</a>
-    </div>
+                    class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-blue"
+                    title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a></div>
+            <a href="index.html" class="w3-bar-item w3-button w3-hover-white w3-padding-large">Home</a>
+            <a href="projects.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-white">Projects</a>
+            <a href="work.html" class="w3-bar-item w3-button w3-hover-white w3-padding-large">Work</a>
+        </div>
 
-    <!-- Navbar on small screens -->
-    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large"></div>
+        <!-- Navbar on small screens -->
+        <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large"></div>
     </div>
 
     <div class="w3-padding w3-row">
         <div class="w3-twothird w3-center w3-row-padding w3-hide-medium w3-hide-large">
             <h3>Car Audio Gesture Control</h3>
-            Uses a 16x16 pixel IR camera, Bluetooth LE module, a Teensy 4.0, and a custom Android app.
-            Connects to a phone over Bluetooth whenever the vehicle Bluetooth is connected. Left/right swipes control
-            forward/back skips.
-            Upward swipes toggle play/pause.
+            <p>Uses a 16x16 pixel IR camera, Bluetooth LE module, a Teensy 4.0, and a custom Android app.
+                Connects to a phone over Bluetooth whenever the vehicle Bluetooth is connected. Left/right swipes
+                control
+                forward/back skips.
+                Upward swipes toggle play/pause.
+            </p>
         </div>
         <div class="w3-center w3-third w3-row-padding w3-hide-medium w3-hide-large">
             <iframe class="smallframe" src="https://www.youtube.com/embed/WrUQPn9H1oQ" allowfullscreen></iframe>
         </div>
         <div class="w3-twothird w3-center w3-row-padding w3-hide-small">
             <h1>Car Audio Gesture Control</h1>
-            Uses a 16x16 pixel IR camera, Bluetooth LE module, a Teensy 4.0, and a custom Android app.
-            Connects to a phone over Bluetooth whenever the vehicle Bluetooth is connected. Left/right swipes control
-            forward/back skips.
-            Upward swipes toggle play/pause.
+            <p>Uses a 16x16 pixel IR camera, Bluetooth LE module, a Teensy 4.0, and a custom Android app.
+                Connects to a phone over Bluetooth whenever the vehicle Bluetooth is connected. Left/right swipes
+                control
+                forward/back skips.
+                Upward swipes toggle play/pause.
+            </p>
         </div>
         <div class="w3-center w3-third w3-row-padding w3-hide-small">
             <iframe class="helpframe" src="https://www.youtube.com/embed/WrUQPn9H1oQ" allowfullscreen></iframe>
@@ -130,20 +139,26 @@
     <div class="w3-padding w3-row">
         <div class="w3-twothird w3-center w3-row-padding w3-hide-medium w3-hide-large">
             <h3>Bass Guitar Video Game Controller</h3>
-            Using a Python program, notes played on a bass guitar are turned into keyboard inputs for a video game.
-            Uses a Python Audio Stream library. Performs a Fast Fourier Transform on the audio stream to determine the
-            note being played.
-            Depending on the note, keypresses are generated.
+            <p>
+                Using a Python program, notes played on a bass guitar are turned into keyboard inputs for a video game.
+                Uses a Python Audio Stream library. Performs a Fast Fourier Transform on the audio stream to determine
+                the
+                note being played.
+                Depending on the note, keypresses are generated.
+            </p>
         </div>
         <div class="w3-center w3-third w3-row-padding w3-hide-medium w3-hide-large">
             <iframe class="smallframe" src="https://www.youtube.com/embed/BOikJTqVL1o" allowfullscreen></iframe>
         </div>
         <div class="w3-twothird w3-center w3-row-padding w3-hide-small">
             <h1>Bass Guitar Video Game Controller</h1>
-            Using a Python program, notes played on a bass guitar are turned into keyboard inputs for a video game.
-            Uses a Python Audio Stream library. Performs a Fast Fourier Transform on the audio stream to determine the
-            note being played.
-            Depending on the note, keypresses are generated.
+            <p>
+                Using a Python program, notes played on a bass guitar are turned into keyboard inputs for a video game.
+                Uses a Python Audio Stream library. Performs a Fast Fourier Transform on the audio stream to determine
+                the
+                note being played.
+                Depending on the note, keypresses are generated.
+            </p>
         </div>
         <div class="w3-center w3-third w3-row-padding w3-hide-small">
             <iframe class="helpframe" src="https://www.youtube.com/embed/BOikJTqVL1o" allowfullscreen></iframe>
@@ -154,20 +169,26 @@
     <div class="w3-padding w3-row">
         <div class="w3-twothird w3-center w3-row-padding w3-hide-medium w3-hide-large">
             <h3>Motion Activated Phillips Hue Lighting</h3>
-            Uses an ESP8266 with a Passive Infra-Red (PIR) sensor. Communicates over local network to a Raspberry Pi
-            that controls lighting via the Phillips Hue API. Multiple sensor systems are distributed throughout the
-            house for launching different actions at different times (garage interior lights, opening/closing blinds).
-            Designed a custom PCB and 3D printed enclosure for the sensors.
+            <p>
+                Uses an ESP8266 with a Passive Infra-Red (PIR) sensor. Communicates over local network to a Raspberry Pi
+                that controls lighting via the Phillips Hue API. Multiple sensor systems are distributed throughout the
+                house for launching different actions at different times (garage interior lights, opening/closing
+                blinds).
+                Designed a custom PCB and 3D printed enclosure for the sensors.
+            </p>
         </div>
         <div class="w3-center w3-third w3-row-padding w3-hide-medium w3-hide-large">
             <iframe class="smallframe" src="https://www.youtube.com/embed/WxQ4a714YrA" allowfullscreen></iframe>
         </div>
         <div class="w3-twothird w3-center w3-row-padding w3-hide-small">
             <h1>Motion Activated Phillips Hue Lighting</h1>
-            Uses an ESP8266 with a Passive Infra-Red (PIR) sensor. Communicates over local network to a Raspberry Pi
-            that controls lighting via the Phillips Hue API. Multiple sensor systems are distributed throughout the
-            house for launching different actions at different times (garage interior lights, opening/closing blinds).
-            Designed a custom PCB and 3D printed enclosure for the sensors.
+            <p>
+                Uses an ESP8266 with a Passive Infra-Red (PIR) sensor. Communicates over local network to a Raspberry Pi
+                that controls lighting via the Phillips Hue API. Multiple sensor systems are distributed throughout the
+                house for launching different actions at different times (garage interior lights, opening/closing
+                blinds).
+                Designed a custom PCB and 3D printed enclosure for the sensors.
+            </p>
         </div>
         <div class="w3-center w3-third w3-row-padding w3-hide-small">
             <iframe class="helpframe" src="https://www.youtube.com/embed/WxQ4a714YrA" allowfullscreen></iframe>
@@ -177,18 +198,22 @@
     <div class="w3-padding w3-row">
         <div class="w3-twothird w3-center w3-row-padding w3-hide-medium w3-hide-large">
             <h3>Gesture Controlled Phillips Hue Lighting</h3>
-            Uses a Microsoft Kinect Camera (Gen I) and a Python script. Leverages the Microsoft Kinect
-            API to extract skeleton and joint data which is passed to the Python script to run gesture
-            recognition using the change in joint positions over time.
+            <p>
+                Uses a Microsoft Kinect Camera (Gen I) and a Python script. Leverages the Microsoft Kinect
+                API to extract skeleton and joint data which is passed to the Python script to run gesture
+                recognition using the change in joint positions over time.
+            </p>
         </div>
         <div class="w3-center w3-third w3-row-padding w3-hide-medium w3-hide-large">
             <iframe class="smallframe" src="https://www.youtube.com/embed/KxzUGOgRLVE" allowfullscreen></iframe>
         </div>
         <div class="w3-twothird w3-center w3-row-padding w3-hide-small">
             <h1>Gesture Controlled Phillips Hue Lighting</h1>
-            Uses a Microsoft Kinect Camera (Gen I) and a Python script. Leverages the Microsoft Kinect
-            API to extract skeleton and joint data which is passed to the Python script to run gesture
-            recognition using the change in joint positions over time.
+            <p>
+                Uses a Microsoft Kinect Camera (Gen I) and a Python script. Leverages the Microsoft Kinect
+                API to extract skeleton and joint data which is passed to the Python script to run gesture
+                recognition using the change in joint positions over time.
+            </p>
         </div>
         <div class="w3-center w3-third w3-row-padding w3-hide-small">
             <iframe class="helpframe" src="https://www.youtube.com/embed/KxzUGOgRLVE" allowfullscreen></iframe>
@@ -199,19 +224,23 @@
     <div class="w3-padding w3-row">
         <div class="w3-twothird w3-center w3-row-padding w3-hide-medium w3-hide-large">
             <h3>LED Headlight Turn Signal Strip</h3>
-            Using a PIC32 microcontroller, voltage regulator, and individually addressable RGB LED strip, accent
-            lighting was added to my vehicle's headlights.
-            Special care was taken to ensure it fails safe and was weather-tolerant.
+            <p>
+                Using a PIC32 microcontroller, voltage regulator, and individually addressable RGB LED strip, accent
+                lighting was added to my vehicle's headlights.
+                Special care was taken to ensure it fails safe and was weather-tolerant.
+            </p>
         </div>
         <div class="w3-center w3-third w3-row-padding w3-hide-medium w3-hide-large">
             <iframe class="smallframe" src="https://www.youtube.com/embed/K6Bt3eDfJ4A" allowfullscreen></iframe>
         </div>
         <div class="w3-twothird w3-center w3-row-padding w3-hide-small">
             <h1>LED Headlight Turn Signal Strip</h1>
-            Using a PIC32 microcontroller, voltage regulator, and individually addressable RGB LED strip, accent
-            lighting was added to my vehicle's headlights.
-            Special care was taken to ensure it fails safe and was weather-tolerant. Defaults to white and strobes
-            orange when the turn signal is active.
+            <p>
+                Using a PIC32 microcontroller, voltage regulator, and individually addressable RGB LED strip, accent
+                lighting was added to my vehicle's headlights.
+                Special care was taken to ensure it fails safe and was weather-tolerant. Defaults to white and strobes
+                orange when the turn signal is active.
+            </p>
         </div>
         <div class="w3-center w3-third w3-row-padding w3-hide-small">
             <iframe class="helpframe" src="https://www.youtube.com/embed/K6Bt3eDfJ4A" allowfullscreen></iframe>
@@ -221,12 +250,16 @@
     <div class="w3-padding w3-row">
         <div class="w3-twothird w3-center w3-row-padding w3-hide-medium w3-hide-large">
             <h3>Custom Sound System</h3>
-            2x 16" 700W Skar Audio woofers, 4x 6.5" JBL 300W 2-way speakers, Skar 1200W 4 + 2 channel MOSFET amplifier,
-            and a line out converter.
-            Designed for high-quality sound, not for volume. Designed to be removed in under 5 minutes to keep
-            the utility of the hatchback.
-            Implemented a custom high-current disconnect easily located in the engine bay and a quick-disconnect harness
-            for the signal wires.
+            <p>
+                2x 16" 700W Skar Audio woofers, 4x 6.5" JBL 300W 2-way speakers, Skar 1200W 4 + 2 channel MOSFET
+                amplifier,
+                and a line out converter.
+                Designed for high-quality sound, not for volume. Designed to be removed in under 5 minutes to keep
+                the utility of the hatchback.
+                Implemented a custom high-current disconnect easily located in the engine bay and a quick-disconnect
+                harness
+                for the signal wires.
+            </p>
         </div>
         <div class="w3-center w3-third w3-row-padding w3-hide-medium w3-hide-large">
             <div class="w3-card">
@@ -235,12 +268,16 @@
         </div>
         <div class="w3-twothird w3-center w3-row-padding w3-hide-small">
             <h1>Custom Sound System</h1>
-            2x 16" 700W Skar Audio woofers, 4x 6.5" JBL 300W 2-way speakers, Skar 1200W 4 + 2 channel MOSFET amplifier,
-            and a line out converter.
-            Designed for high-quality sound, not for volume. Designed to be removed in under 5 minutes to keep
-            the utility of the hatchback.
-            Implemented a custom high-current disconnect easily located in the engine bay and a quick-disconnect harness
-            for the signal wires.
+            <p>
+                2x 16" 700W Skar Audio woofers, 4x 6.5" JBL 300W 2-way speakers, Skar 1200W 4 + 2 channel MOSFET
+                amplifier,
+                and a line out converter.
+                Designed for high-quality sound, not for volume. Designed to be removed in under 5 minutes to keep
+                the utility of the hatchback.
+                Implemented a custom high-current disconnect easily located in the engine bay and a quick-disconnect
+                harness
+                for the signal wires.
+            </p>
         </div>
         <div class="w3-center w3-third w3-row-padding w3-hide-small">
             <div class="w3-card">

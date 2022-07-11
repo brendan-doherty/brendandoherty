@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+<title>Brendan Doherty</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="icon" href="Images/Logo.jpg">
+<style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: "Lato", sans-serif;
+    }
+
+    body,
+    html {
+        height: 100%;
+        color: rgb(77, 75, 75);
+        line-height: 1.8;
+    }
+
+    .w3-wide {
+        letter-spacing: 10px;
+    }
+
+    .w3-hover-opacity {
+        cursor: pointer;
+    }
+
+    .material-icons {
+        vertical-align: -28%
+    }
+
+    p+ul {
+        margin-top: -13px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    .w3-sidebar {
+        z-index: 50;
+    }
+
+    ul {
+        list-style-position: inside;
+        padding: 0;
+    }
+
+    .responsive-iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .helpframe {
+        width: 33vw;
+        height: 28.125vw;
+        /*16:9*/
+        max-height: 20vw;
+        /*16:9*/
+    }
+
+    .smallframe {
+        width: 100%;
+    }
+
+    .video-container {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        padding-top: 56.25%;
+        /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+    }
+
+    * {
+        box-sizing: border-box
+    }
+
+    /* Slideshow container */
+    .slideshow-container {
+        max-width: 1000px;
+        position: relative;
+        margin: auto;
+    }
+
+    /* Hide the images by default */
+    .mySlides {
+        display: none;
+    }
+
+    /* Next & previous buttons */
+    .prev,
+    .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        margin-top: -22px;
+        padding: 16px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+    }
+
+    /* Position the "next button" to the right */
+    .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover,
+    .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    /* Caption text */
+    .text {
+        color: #f2f2f2;
+        background-color: rgba(0, 0, 0, 0.8);
+        font-size: 15px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Number text (1/3 etc) */
+    .numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+    }
+
+    /* The dots/bullets/indicators */
+    .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+    }
+
+    .active,
+    .dot:hover {
+        background-color: #717171;
+    }
+
+    /* Fading animation */
+    .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+
+    @keyframes fade {
+        from {
+            opacity: .4
+        }
+
+        to {
+            opacity: 1
+        }
+    }
+</style>
+
+<nav class="w3-sidebar w3-bar-block w3-card w3-animate-right w3-center" style="display:none" id="mySidebar">
+    <h1 class="w3-xxxlarge w3-text-theme">Navigation</h1>
+    <button class="w3-bar-item w3-button" onclick="closeSidebar()">Close <i class="fa fa-remove"></i></button>
+    <a href="index.html" class="w3-bar-item w3-button">Home</a>
+</nav>
+
+<body>
+    <!-- Navbar -->
+    <div>
+        <div class="w3-bar w3-blue w3-card w3-left-align w3-large"">
+            <div onclick=" openSidebar()"><a
+                class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-blue"
+                title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a></div>
+        <a href="index.html" class="w3-bar-item w3-button w3-hover-white w3-padding-large">Home</a>
+        <a href="projects.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large">Projects</a>
+        <a href="work.html" class="w3-bar-item w3-button w3-hover-white w3-padding-large w3-white">Work</a>
+    </div>
+
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large"></div>
+    </div>
+
+    <div class="FSAE-car w3-padding-large">
+        <h1>Formula SAE Competition</h1>
+        <p>The 2022 Formula SAE (FSAE) competition season was challenging for University of Manitoba Society of
+            Automotive Engineers (UMSAE). The team had limited knowledge transfer due to the senior members graduating
+            over COVID-19; we had limited access to the hardware and the shop for a majority of the build cycle; and
+            many of our sponsors were unable to continue their support this year due to the pandemic. This resulted in
+            an 8-week build cycle using many recycled and experimental pieces.</p>
+        <p>
+            As Software Systems Officer (SSO), my role was to manage the software system and lead the integration and
+            development of all systems on the vehicle. There are two controller boards - the Vehicle Control Unit
+            (VCU) and the Accumulator Control Unit (ACU) in the rear. The VCU is to manage driver inputs and outputs,
+            overall vehicle health, error reporting, and interfacing to external tools for monitoring. The ACU manages
+            the high and low voltage systems, monitors critical temperatures, and manages the safety circuits.
+        </p>
+        <div class="slideshow-container">
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides1 fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="Images/theShot.jpg" style="width:100%">
+                <div class="text">Crossing the finish line</div>
+            </div>
+
+            <div class="mySlides1 fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="Images/driving.jpg" style="width:100%">
+                <div class="text">Waiting for the green light</div>
+            </div>
+
+            <div class="mySlides1 fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="Images/rear.png" style="width:100%">
+                <div class="text">Rear of the vehicle</div>
+            </div>
+
+            <div class="mySlides1 fade">
+                <div class="numbertext">4 / 3</div>
+                <img src="Images/rain.jpg" style="width:100%">
+                <div class="text">Rain test</div>
+            </div>
+
+            <div class="mySlides1 fade">
+                <div class="numbertext">5 / 3</div>
+                <img src="Images/carBare.jpg" style="width:100%">
+                <div class="text">Car in the shop</div>
+            </div>
+
+            <div class="mySlides1 fade">
+                <div class="numbertext">6 / 3</div>
+                <img src="Images/team.jpg" style="width:100%">
+                <div class="text">The team in Michigan</div>
+            </div>
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+        </div>
+        <br>
+    </div>
+
+    <!-- Footer -->
+    <div class="w3-row">
+        <footer class="w3-center w3-dark-grey">
+            <div class="w3-xxxlarge">
+                <a href="https://www.linkedin.com/in/brendan-doherty-2000/">
+                    <i class="fa fa-linkedin w3-hover-opacity"></i></a>
+                <a href="https://github.com/Locomotivation">
+                    <i class="fa fa-github w3-hover-opacity"></i></a>
+                <a href="https://www.instagram.com/brendan.j.d/">
+                    <i class="fa fa-instagram w3-hover-opacity"></i></a>
+            </div>
+        </footer>
+    </div>
+
+
+
+    <script>
+        function openSidebar() {
+            document.getElementById("mySidebar").style.width = "100%";
+            document.getElementById("mySidebar").style.display = "block";
+        }
+        function closeSidebar() {
+            document.getElementById("mySidebar").style.display = "none";
+        }
+        function resizeIframe(obj) {
+            obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
+        }
+
+        let slideIndex = 1;
+        let slideshows = ["mySlides1"]
+        let slideIndices = [1, 1]
+        showSlides(slideIndices[0], 0);
+
+        // Next/previous controls
+        function plusSlides(n, no) {
+            showSlides(slideIndices[no] += n, no);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n, no) {
+            showSlides(slideIndices[no] = n, no);
+        }
+
+        function showSlides(n, no) {
+            let i;
+            let slides = document.getElementsByClassName(slideshows[no]);
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndices[no] = 1 }
+            if (n < 1) { slideIndices[no] = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndices[no] - 1].style.display = "block";
+            dots[slideIndices[no] - 1].className += " active";
+        }
+    </script>
+
+</body>
+
+</html>
