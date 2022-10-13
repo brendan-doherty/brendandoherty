@@ -106,7 +106,8 @@
 
     /* Hide the images by default */
     .FSAESlides,
-    .SATSlides {
+    .SATSlides,
+    .TAIVslides {
         display: none;
     }
 
@@ -187,7 +188,8 @@
     }
 
     #FSAEmore,
-    #SATmore {
+    #SATmore,
+    #TAIVmore {
         display: none;
     }
 
@@ -338,6 +340,16 @@
                 determining and
                 controling attitude, a faster dedicated communication was needed. The CDH determines and controls
                 attitude over an SPI connection to the Atitude Determination and Control System (ADCS). <br><br>
+
+                The satellite has been in development since 2020. Picking up the software so late in development came
+                with many challenges. One of the biggest challenges of my time with the mission was picking up a
+                codebase with little documentation, and needing to quickly advance the software system in order to meet
+                internal and external deadlines. Also, many of my colleagues had been working on the satellite for over
+                two years now, meaning that their discussions and knowledge were much higher level than mine at the
+                start. <br><br>
+
+                In September 2020, we officially got our manifest approved. We will be launching on SpaceX CRS-27, with
+                an expected launch date of early January.
         </p></span>
         <button class="readMoreButton w3-hover-black" onclick="showMoreSAT()" id="SATbtn">Read more</button>
 
@@ -356,6 +368,39 @@
             </div>
 
             <div class="SATSlides fade">
+                <div class="numbertext">3 / 6</div>
+                <img src="Images/IRIS Wireframe.png" style="width:100%">
+                <div class="text">Wireframe diagram of the satellite</div>
+            </div>
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+        </div>
+        <br>
+    </div>
+
+    <div class="TAIV w3-padding-large">
+        <h1>Embedded Firmware Developer</h1>
+        <p> Sploobis <span id="TAIVdots">...</span><span id="TAIVmore"> dick and balls.
+        </p></span>
+        <button class="readMoreButton w3-hover-black" onclick="showMoreTAIV()" id="TAIVbtn">Read more</button>
+
+        <div class="slideshow-container" id="TAIVSlideshow">
+            <!-- Full-width images with number and caption text -->
+            <div class="TAIVslides fade">
+                <div class="numbertext">1 / 6</div>
+                <img src="Images/Iris Render.png" style="width:100%">
+                <div class="text">Render of the satellite</div>
+            </div>
+
+            <div class="TAIVslides fade">
+                <div class="numbertext">2 / 6</div>
+                <img src="Images/cleanroom.jpg" style="width:100%">
+                <div class="text">Me in the Advanced satellite Integration Facility (ASIF)</div>
+            </div>
+
+            <div class="TAIVslides fade">
                 <div class="numbertext">3 / 6</div>
                 <img src="Images/IRIS Wireframe.png" style="width:100%">
                 <div class="text">Wireframe diagram of the satellite</div>
@@ -397,10 +442,11 @@
         }
 
         let slideIndex = 1;
-        let slideshows = ["FSAESlides", "SATSlides"]
-        let slideIndices = [1, 1]
+        let slideshows = ["FSAESlides", "SATSlides", "TAIVslides"]
+        let slideIndices = [1, 1, 1]
         showSlides(slideIndices[0], 0);
         showSlides(slideIndices[1], 1);
+        showSlides(slideIndices[2], 2);
 
         // Next/previous controls
         function plusSlides(n, no) {
@@ -444,6 +490,22 @@
             var dots = document.getElementById("SATdots");
             var moreText = document.getElementById("SATmore");
             var btnText = document.getElementById("SATbtn");
+
+            if (dots.style.display === "none") {
+                dots.style.display = "inline";
+                btnText.innerHTML = "Read more";
+                moreText.style.display = "none";
+            } else {
+                dots.style.display = "none";
+                btnText.innerHTML = "Read less";
+                moreText.style.display = "inline";
+            }
+        }
+
+        function showMoreTAIV() {
+            var dots = document.getElementById("TAIVdots");
+            var moreText = document.getElementById("TAIVmore");
+            var btnText = document.getElementById("TAIVbtn");
 
             if (dots.style.display === "none") {
                 dots.style.display = "inline";
